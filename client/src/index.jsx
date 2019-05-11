@@ -12,10 +12,6 @@ class App extends React.Component {
     }
     this.search = this.search.bind(this);
     this.getTopRepos = this.getTopRepos.bind(this);
-    // this.setState = this.setState.bind(this);
-    // this.setRepos = this.setRepos.bind(this);
-
-    // this.getTopRepos();
   }
 
   search(term) {
@@ -58,12 +54,16 @@ class App extends React.Component {
   }
 
   render() {
-
-    return (<div>
-      <h1>Github Fetcher</h1>
-      <RepoList repos={this.state.repos} />
-      <Search onSearch={this.search.bind(this)} />
-    </div>)
+    return (
+      <div>
+        <div className="header">
+          <img src="Artboard.png" id="logo"/>
+          <h1 className="title">Github Fetcher</h1>
+          <button id="submit-btn">Submit Git</button>
+        </div>
+        <RepoList repos={this.state.repos} />
+        <Search onSearch={this.search.bind(this)} />
+      </div>)
   }
 }
 

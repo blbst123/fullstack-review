@@ -20,16 +20,17 @@ class RepoList extends React.Component {
   render() {
     let topRepos = this.getTop25().map(function (repo) {
       return (
-        <div>
-          <h4> Repo List Component </h4>
-          <p>{repo.name}</p>
-          <p>{repo.stargazers_count}</p>
+        <div className="repoDiv">
+          <a href={repo.html_url} target="_blank" className="repoName">Repo Name: {repo.name}</a>
+          <a href={repo.owner_url} target="_blank" className="repoOwner field">{repo.owner_login}</a>
+          <p className="repoDescription field">Description{repo.description || 'null'}</p>
+          <p className="repoStarCount field">{repo.stargazers_count}</p>
         </div>
       )
     });
 
     return (
-      <div>
+      <div className="repoContainer">
         {topRepos}
       </div>
     );
