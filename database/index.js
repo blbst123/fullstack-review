@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://test_user11:Odg0GYSvUO8Rvx6w@gitrepos-jsvvf.mongodb.net/test?retryWrites=true');
+mongoose.connect('mongodb+srv://test_user11:<password>@gitrepos-jsvvf.mongodb.net/test?retryWrites=true');
 
 let repoSchema = mongoose.Schema({
   id: {
