@@ -20,7 +20,7 @@ class RepoList extends React.Component {
   render() {
     let topRepos = this.getTop25().map(function (repo) {
       return (
-        <div className="repoDiv">
+        <div key ={repo.id} className="repoDiv">
           <a href={repo.html_url} target="_blank" className="repoName">Repo Name: {repo.name}</a>
           <a href={repo.owner_url} target="_blank" className="repoOwner field">{repo.owner_login}</a>
           <p className="repoDescription field">Description{repo.description || 'null'}</p>

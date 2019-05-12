@@ -24,7 +24,6 @@ class App extends React.Component {
         username: term
       }),
       success: () => {
-        console.log("hererer in search success");
         this.getTopRepos();
       },
       error: function (err) {
