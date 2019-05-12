@@ -4,7 +4,7 @@ const express = require('express');
 let app = express();
 const bodyParser = require('body-parser');
 const { getReposByUsername } = require('../helpers/github.js');
-const { save, retrieve, Repo } = require('../database/index.js');
+const { save, retrieve } = require('../database/index.js');
 let port = 1128;
 
 app.use(bodyParser.json());

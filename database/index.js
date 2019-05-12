@@ -46,4 +46,3 @@ let retrieve = function(callback) {
 
 module.exports.save = save;
 module.exports.retrieve = retrieve;
-module.exports.Repo = Repo;
